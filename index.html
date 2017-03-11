@@ -7,7 +7,6 @@ layout: default
 <div class="home">
 
     <h1 class="page-heading">Posts</h1>
-    <i class="fa fa-search"></i><span>fa</span>
 
     <ul class="post-list">
         {% for post in site.posts %}
@@ -19,7 +18,9 @@ layout: default
             </h2>
 
             <div>
-                {{ post.content }}
+                {% if post.excerpt %}
+                {{ post.excerpt }}
+                {% endif %}
             </div>
         </li>
         {% endfor %}

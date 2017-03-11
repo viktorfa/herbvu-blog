@@ -13,11 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: HerbVu
+title: HerbVu blog
 email: "info@herbvu.com"
 description: > # this means to ignore newlines until "baseurl:"
-  Blog about health, food and how to buy grocery products online.
-baseurl: /blog
+  HerbVu is collecting data to make shopping for groceries easier and healthier.
+baseurl: "/blog"
 url: "http://www.herbvu.com" # the base hostname & protocol for your site
 twitter_username: herbvu
 facebook_username: herbvu
@@ -28,9 +28,15 @@ permalink: /:year/:month/:title/
 markdown: kramdown
 theme: minima
 
+excerpt_separator: <!--more-->
+
 
 gems:
   - jekyll-assets
 
-sources:
-  - _assets/css
+assets:
+  sources:
+    - _assets/js
+    - _assets/css
+    - _assets/data
+    - _assets/images
